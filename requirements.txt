@@ -1,0 +1,11 @@
+configparser
+requests
+google-api-python-client
+google-cloud-core
+google-cloud-resource-manager
+google-cloud
+pprint
+oauth2client
+tenable_io
+cloudflare
+linode_api4

@@ -1,0 +1,120 @@
+[TENABLE.IO]
+email = PROVIDE_EMAIL_FOR_NOTIFICATIONS
+access_key = PROVIDE_TENABLE_ACCESS_KEY
+secret_key = PROVIDE_TENABLE_SECRET_KEY
+# Set license hosts amount
+license_count = 65
+# Tenable Frankfurt network ranges: 54.219.188.128/26,13.56.21.128/25
+# But only an IPv4 range (CIDR) value of /16 or /24 is allowed for Access Rules
+scanner_ranges = 54.219.188.0/24,13.56.21.0/24
+
+[TENABLE_GCP_SCAN]
+# Create scan. For more details: https://cloud.tenable.com/api#/resources/scans/create
+# Set general scan attributes
+name = gcp
+emails = PROVIDE_EMAIL_FOR_NOTIFICATIONS
+enabled = True
+rrules = FREQ=ONETIME
+timezone = PROVIDE_TIME_ZONE For example: Europe/Kiev
+folder_name = GCP
+policy_name = PROVIDE_SCAN_POLICY_NAME
+# Provide scanner id (Tenable EU Frankfurt scanners)
+scanner_id = 211590
+# Set permissions level for newly created scan
+acl_name = Administrators
+acl_id = 5
+acl_permissions = 128
+# Set time duration for scan of 65 IP addresses (hours)
+time_delta = 13
+
+[TENABLE_CF_SCAN]
+# Create scan. For more details: https://cloud.tenable.com/api#/resources/scans/create
+# Set general scan attributes
+name = cf
+emails = PROVIDE_EMAIL_FOR_NOTIFICATIONS
+enabled = True
+rrules = FREQ=ONETIME
+timezone = PROVIDE_TIME_ZONE For example: Europe/Kiev
+folder_name = Cloudlare
+policy_name = PROVIDE_SCAN_POLICY_NAME
+# Provide scanner id (Tenable EU Frankfurt scanners)
+scanner_id = 211590
+# Set permissions level for newly created scan
+acl_name = Administrators
+acl_id = 5
+acl_permissions = 128
+# Set time duration for scan of 65 IP addresses (hours)
+time_delta = 13
+
+[TENABLE_AWS_SCAN]
+# Create scan. For more details: https://cloud.tenable.com/api#/resources/scans/create
+# Set general scan attributes
+name = aws
+emails = PROVIDE_EMAIL_FOR_NOTIFICATIONS
+enabled = True
+rrules = FREQ=ONETIME
+timezone = PROVIDE_TIME_ZONE For example: Europe/Kiev
+folder_name = AWS
+policy_name = PROVIDE_SCAN_POLICY_NAME
+# Provide scanner id (Tenable EU Frankfurt scanners)
+scanner_id = 211590
+# Set permissions level for newly created scan
+acl_name = Administrators
+acl_id = 5
+acl_permissions = 128
+# Set time duration for scan of 65 IP addresses (hours)
+time_delta = 13
+
+[TENABLE_LINODE_SCAN]
+# Create scan. For more details: https://cloud.tenable.com/api#/resources/scans/create
+# Set general scan attributes
+name = linode
+emails = PROVIDE_EMAIL_FOR_NOTIFICATIONS
+enabled = True
+rrules = FREQ=ONETIME
+timezone = PROVIDE_TIME_ZONE For example: Europe/Kiev
+folder_name = Linode
+policy_name = PROVIDE_SCAN_POLICY_NAME
+# Provide scanner id (Tenable EU Frankfurt scanners)
+scanner_id = 211590
+# Set permissions level for newly created scan
+acl_name = Administrators
+acl_id = 5
+acl_permissions = 128
+# Set time duration for scan of 65 IP addresses (hours)
+time_delta = 13
+
+[TENABLE_OFFICE_SCAN]
+# Create scan. For more details: https://cloud.tenable.com/api#/resources/scans/create
+# Set general scan attributes
+name = PROVIDE_SCAN_NAME
+emails = PROVIDE_EMAIL_FOR_NOTIFICATIONS
+enabled = True
+rrules = FREQ=ONETIME
+timezone = PROVIDE_TIME_ZONE For example: Europe/Kiev
+folder_name = Linode
+policy_name = PROVIDE_SCAN_POLICY_NAME
+# Provide scanner id (Tenable EU Frankfurt scanners)
+scanner_id = 211590
+# Set permissions level for newly created scan
+acl_name = Administrators
+acl_id = 5
+acl_permissions = 128
+# Set time duration for scan of 65 IP addresses (hours)
+time_delta = 2
+# Define your target below. Should start with variable with 'target_'
+target_custome = PROVIDE_CUSTOM_TARGETS_SEPARATED_BY_COMMA
+
+
+[GCP]
+organization = PROVIDE_GCP_ORG_NAME
+gcp-api-key-json = PROVIDE_PATH_TO_SERVICE_ACCOUNT_KEY
+
+
+[CLOUDFLARE]
+cf_email = PROVIDE_EMAIL_FOR_NOTIFICATIONS
+cf_api_key = PROVIDE_CLOUDFLAREE_SERVICE_ACCOUNT_API_KEY
+
+
+[LINODE]
+lin_api_key = PROVIDE_LINODE_SERVICE_ACCOUNT_API_KEY
